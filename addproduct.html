@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PB Figure</title>
+    <link rel="icon" href="./images/2.png" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white">
+    <nav class="bg-amber-600 flex justify-between">
+        <div class="w-2/6 flex mx-10">
+            <a href="#"><img src="./images/2.png" class="w-[80px] h-[70px]" /></a>
+        </div>
+        <div class="font-super text-3xl w-4/6 flex justify-start gap-24 items-center text-white">
+            <a href="./index.html" class="hover:text-cyan-500">Home</a>
+            <a href="./product.html" class="hover:text-cyan-500">Product</a>
+            <a href="./about.html" class="hover:text-cyan-500">About</a>
+            <a href="./contact.html" class="hover:text-cyan-500">Contact</a>
+            <a href="./account.html" class="text-cyan-500">Account</a>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <div class="text-2xl w-1/6 flex flex-col bg-slate-700 font-super pt-10 text-white h-[670px]">
+            <a href="./account.html" class="hover:bg-gray-500 p-2">Information</a>
+            <a href="./addproduct.html" class="bg-gray-500 p-2">Product Manager</a>
+        </div>
+
+        <div class="bg-slate-600 w-5/6 p-6">
+            <div class="flex justify-between items-center mb-6">
+                <div class="p-2 bg-white w-[400px] h-[40px] rounded-3xl flex items-center px-4">
+                    <i class="fa-solid fa-magnifying-glass mr-2"></i>
+                    <input id="searchInput" type="text" placeholder="Search product"
+                        class="focus:outline-none w-full" />
+                </div>
+
+                <div class="h-[40px] bg-green-500 hover:bg-green-700 text-white p-2 rounded-3xl flex items-center cursor-pointer"
+                    onclick="openForm()">
+                    <i class="fa-solid fa-plus mr-2"></i>
+                    <span>Add Product</span>
+                </div>
+            </div>
+
+            <p class="text-2xl text-white font-bold mb-4">My Product</p>
+            <div id="productlist" class="grid grid-cols-4 gap-4 p-4">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL (ẩn mặc định) -->
+    <div id="addproduct" class="fixed inset-0 hidden justify-center items-center bg-black bg-opacity-40 z-50">
+        <div class="w-[350px] border-2 border-black p-4 rounded-xl bg-white">
+            <h2 class="font-metal text-2xl text-center text-cyan-500 mb-3">Add Product</h2>
+            <div class="flex flex-col gap-3">
+                <label class="flex flex-col">
+                    Product name:
+                    <input id="productname" type="text" class="focus:outline-none border-b border-black" />
+                </label>
+                <label class="flex flex-col">
+                    Product describe:
+                    <input id="productdes" type="text" class="focus:outline-none border-b border-black" />
+                </label>
+                <label class="flex flex-col">
+                    Product price:
+                    <input id="productprice" type="text" class="focus:outline-none border-b border-black" />
+                </label>
+                <label class="flex flex-col">
+                    Product image:
+                    <input id="productimg" type="file" accept="image/*" />
+                </label>
+            </div>
+
+            <div class="flex gap-3 mt-5 justify-end">
+                <button onclick="closeForm()"
+                    class="p-2 bg-gray-400 rounded-xl text-white hover:bg-gray-500">Cancel</button>
+                <button onclick="addProduct()"
+                    class="p-2 bg-green-500 rounded-xl text-white hover:bg-green-700">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/addproduct.js"></script>
+</body>
+
+
+</html>

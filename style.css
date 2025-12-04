@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Ice\ Cold';
+    src: url('./fonts/Ice-Cold-Solid-LH.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Metal\ Glass';
+    src: url('./fonts/Metal\ Glass.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Super\ Croissant';
+    src: url('./fonts/Super\ Croissant.ttf') format('truetype');
+}
