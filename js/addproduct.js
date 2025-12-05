@@ -74,7 +74,7 @@ function editProduct(id) {
 function renderProducts(filter = "") {
   const products = JSON.parse(localStorage.getItem("products")) || [];
   const filtered = products.filter(p =>
-    (p.name + p.des).toLowerCase().includes(filter.toLowerCase())
+    p.name.toLowerCase().includes(filter.toLowerCase())
   );
 
   productlist.innerHTML = "";
@@ -86,11 +86,12 @@ function renderProducts(filter = "") {
 
   filtered.forEach(product => {
     const item = document.createElement("div");
-    item.className = "bg-white p-3 rounded-xl shadow-xl flex flex-col w-[220px]";
-
+    item.className = "bg-white p-3 rounded-xl shadow-xl flex flex-col";
     item.innerHTML = `
-      <img src="${product.img}" class="w-full h-[150px] object-cover rounded-lg" />
-      <h3 class="font-bold text-xl">${product.name}</h3>
+      <div class="overflow-hidden rounded-lg">
+    <img src="${product.img}" class="w-full h-[250px] transform transition-transform hover:scale-110"/>
+    </div>
+      <h3 class="font-bold text-xl ">${product.name}</h3>
       <p class="text-sm mb-2">${product.des}</p>
       <p class="text-red-500 font-bold mb-3">${product.price}</p>
       <div class="mt-auto flex gap-2">

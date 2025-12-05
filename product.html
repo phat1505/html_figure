@@ -9,15 +9,12 @@
     <link rel="stylesheet" href="./output.css" />
 </head>
 
-<body class="bg-white">
-    <nav class="bg-gray-800 flex justify-between">
-        <div href="#" class="flex items-center w-2/6">
-            <a href="#" class="flex items-center">
-                <img src="./images/2.png" class="w-[70px] h-[70px]" />
-                <h1 class="font-ice text-5xl text-amber-500">PB Figure</h1>
-            </a>
+<body class="bg-gray-700">
+    <nav class="bg-amber-600 flex justify-between">
+        <div class="w-2/6 flex mx-10">
+            <a href="#"><img src="./images/2.png" class="w-[80px] h-[70px]" /></a>
         </div>
-        <div class="font-super text-3xl w-4/6 flex justify-start gap-28 items-center text-amber-500">
+        <div class="font-super text-3xl w-4/6 flex justify-start gap-24 items-center text-white">
             <a href="./index.html" class="hover:text-cyan-500">Home</a>
             <a href="./product.html" class="text-cyan-500">Product</a>
             <a href="./about.html" class="hover:text-cyan-500">About</a>
@@ -25,5 +22,15 @@
             <a href="./account.html" class="hover:text-cyan-500">Account</a>
         </div>
     </nav>
+    <div  class="block items-center">
+        <h1 class="text-center text-3xl font-metal text-cyan-500 mt-16">Hot Product</h1>
+        <div id="productlist" class="mx-auto w-[1100px] grid grid-cols-4 auto-rows-[380px] gap-4 p-4"></div>
+    </div>
+    <script src="./js/renderPublicProduct.js"></script>
 </body>
+<footer>
+        <div>
+
+        </div>
+</footer>
 </html>
