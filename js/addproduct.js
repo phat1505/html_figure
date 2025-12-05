@@ -76,14 +76,14 @@ function renderProducts(filter = "") {
   const filtered = products.filter(p =>
     p.name.toLowerCase().includes(filter.toLowerCase())
   );
-
+  filtered.sort((a,b) => b.id - a.id);
   productlist.innerHTML = "";
 
   if (filtered.length === 0) {
     productlist.innerHTML = `<div class="col-span-3 text-white">No products yet.</div>`;
     return;
   }
-
+  
   filtered.forEach(product => {
     const item = document.createElement("div");
     item.className = "bg-white p-3 rounded-xl shadow-xl flex flex-col";
